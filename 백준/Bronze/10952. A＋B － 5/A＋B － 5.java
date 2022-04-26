@@ -6,7 +6,7 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		while(true) {					// while ( true ) 로 무한 반복 한다.  아닐경우 입력받은 a 와 b 를 더해준다.
+		while(true) {					// while ( true ) 로 무한 반복 한다.
 			
 				int a = sc.nextInt();	
 				int b = sc.nextInt();	
@@ -20,4 +20,5 @@ public class Main {
 			}
 	}
 }
+
 
