@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT *
+FROM (SELECT I.NAME, I.DATETIME
+      FROM ANIMAL_INS I
+      LEFT JOIN ANIMAL_OUTS O ON (I.ANIMAL_ID = O.ANIMAL_ID) -- ANIMAL_INS 테이블에서 가장 오래있었던 동물 3마리 이름과 보호시작일을 조회하기때문에
+      WHERE O.ANIMAL_ID IS NULL                              -- 두 테이블 중 왼쪽에 기술된 O.ANIMAL_IDF를 기준으로 조회하기 위해 LEFT JOIN을 사용함.
+      ORDER BY I.DATETIME)
+WHERE ROWNUM <= 3;
