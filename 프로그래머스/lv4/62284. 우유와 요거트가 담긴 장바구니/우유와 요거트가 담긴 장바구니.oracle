@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT CART_ID
+FROM CART_PRODUCTS CP
+WHERE NAME IN ('Milk', 'Yogurt')      -- NAME 안에 Milk 와 Yogurt가 있는 것 중에서
+GROUP BY CART_ID                      
+HAVING COUNT(DISTINCT NAME) > 1       -- CART_ID에서 중복 없는 NAME이 한개이상 있을 때 조회
+ORDER BY CART_ID;
