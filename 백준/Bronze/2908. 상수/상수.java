@@ -5,8 +5,8 @@ import java.util.Scanner;
 		
 		Scanner sc = new Scanner(System.in);
 		
-		String a = sc.next();
-		String b = sc.next();
+		String a = sc.next();					
+		String b = sc.next();					// 문자열 a, b를 입력받는다.
 		
 		StringBuffer A = new StringBuffer(a);
 		StringBuffer B = new StringBuffer(b);
@@ -21,6 +21,20 @@ import java.util.Scanner;
 		} else {
 			System.out.println(strB);
 		}
+		
+	/*	방법 2
+	 * 
+		int A = in.nextInt();
+		int B = in.nextInt();
+        
+        in.close();
+        
+		A = Integer.parseInt(new StringBuilder().append(A).reverse().toString());
+		B = Integer.parseInt(new StringBuilder().append(B).reverse().toString());
+		
+		System.out.print(A > B ? A : B);
+		
+	*/
 		
 	}
 }
